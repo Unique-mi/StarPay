@@ -1,0 +1,531 @@
+.transactionShell {
+    min-width: 0;
+    min-height: 100vh;
+    background: #f8f8f8;
+}
+
+.transactionShell :global(.admin-content) {
+    padding: 0 !important;
+    background: #f8f8f8;
+}
+
+.detailsPage {
+    min-height: calc(100vh - 76px);
+    width: 100%;
+    padding: 0 14px 18px;
+    color: #111;
+    background: #f8f8f8;
+    font-family: inherit;
+}
+
+.pageNavigation {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    margin: 0 -14px 14px;
+    padding: 0 23px;
+    background: #fff;
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #111;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.backLink svg {
+    width: 15px;
+    height: 15px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.receiptContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.referenceBanner,
+.infoSection,
+.receiptFooter,
+.notFound {
+    width: 100%;
+    border-radius: 11px;
+    background: #fff;
+}
+
+.referenceBanner {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 32px 12px 14px;
+}
+
+.mainReference {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 12px;
+}
+
+.mainReference strong {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.printButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 36px;
+    padding: 8px 14px;
+    border: 0;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #173c5b 0%, #008c63 100%);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: filter .18s ease, transform .18s ease;
+}
+
+.printButton:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+.printButton:focus-visible,
+.backLink:focus-visible {
+    outline: 3px solid #73cbb1;
+    outline-offset: 3px;
+}
+
+.printButton svg {
+    width: 17px;
+    height: 17px;
+}
+
+.infoSection {
+    min-width: 0;
+    padding: 13px 12px 11px;
+}
+
+.sectionTitle {
+    margin: 0 0 13px;
+    padding: 0 0 10px;
+    border-bottom: 1px dashed #e7e7e7;
+    color: #626262;
+    font-size: 11px;
+    line-height: 1.35;
+    font-weight: 450;
+}
+
+.infoGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    min-height: 73px;
+    align-items: center;
+    padding: 17px 16px;
+    border-radius: 10px;
+    background: #f8f8f8;
+}
+
+.infoGrid[data-columns="2"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.infoGrid[data-columns="3"] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.infoItem {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    min-width: 0;
+}
+
+.infoItem>span {
+    color: #a5a5a5;
+    font-size: 10px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.infoItem>strong {
+    color: #111;
+    font-size: 11px;
+    line-height: 1.4;
+    font-weight: 750;
+    overflow-wrap: anywhere;
+}
+
+.productCount {
+    margin: 0 0 12px;
+    color: #111;
+    font-size: 11px;
+    font-weight: 750;
+}
+
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.productCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 9px;
+    min-width: 0;
+    min-height: 47px;
+    padding: 7px 14px;
+    border-radius: 9px;
+    background: #f8f8f8;
+}
+
+.productDetails {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-width: 0;
+}
+
+.productIcon {
+    display: grid;
+    flex: 0 0 34px;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    border: 1px solid #ededed;
+    border-radius: 50%;
+    background: #fff;
+    color: #6c7777;
+}
+
+.productIcon svg {
+    width: 23px;
+    height: 23px;
+}
+
+.productCopy {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+
+.productCopy strong {
+    color: #141414;
+    font-size: 10px;
+    font-weight: 750;
+}
+
+.productCopy small {
+    color: #999;
+    font-size: 9px;
+}
+
+.productPrice {
+    flex: 0 0 auto;
+    color: #111;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.productPrice small {
+    font-size: 8px;
+}
+
+.settlementGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    min-height: 70px;
+    align-items: center;
+    margin-top: 13px;
+    padding: 17px 16px;
+    border-radius: 10px;
+    background: #f8f8f8;
+}
+
+.statusBadge {
+    display: inline-flex;
+    width: fit-content;
+    min-height: 27px;
+    align-items: center;
+    padding: 5px 14px;
+    border-radius: 20px;
+    background: #d1fae5;
+    color: #079447 !important;
+    font-size: 10px !important;
+    font-weight: 650 !important;
+}
+
+.statusBadge.pending {
+    background: #fff2cc;
+    color: #9a6700 !important;
+}
+
+.statusBadge.failed,
+.statusBadge.suspended {
+    background: #fee2e2;
+    color: #b42318 !important;
+}
+
+.receiptFooter {
+    display: flex;
+    min-height: 90px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 20px;
+}
+
+.receiptFooter h2 {
+    margin: 0 0 7px;
+    color: #858585;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.receiptFooter p {
+    margin: 5px 0;
+    color: #969696;
+    font-size: 11px;
+}
+
+.footerBrand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    width: 130px;
+}
+
+.footerLogoImage {
+    display: block;
+    width: 110px;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.45;
+}
+
+.notFound {
+    padding: 36px 24px;
+    text-align: center;
+}
+
+.notFound h1 {
+    margin: 0 0 8px;
+    font-size: 20px;
+}
+
+.notFound p {
+    color: #737373;
+    font-size: 13px;
+}
+
+.notFound a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #008a64;
+    font-weight: 700;
+}
+
+@media (max-width: 1050px) {
+    .infoGrid {
+        gap: 13px;
+        padding-inline: 13px;
+    }
+
+    .infoItem>strong {
+        font-size: 10px;
+    }
+
+    .productCard {
+        padding-inline: 9px;
+    }
+}
+
+@media (max-width: 800px) {
+    .infoGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .infoGrid[data-columns="4"],
+    .infoGrid[data-columns="3"] {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .productGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .settlementGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .detailsPage {
+        padding: 0 8px 12px;
+    }
+
+    .pageNavigation {
+        margin: 0 -8px 9px;
+        padding-inline: 13px;
+        min-height: 43px;
+    }
+
+    .receiptContent {
+        gap: 8px;
+    }
+
+    .referenceBanner {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 12px;
+        padding: 13px;
+    }
+
+    .printButton {
+        width: 100%;
+    }
+
+    .infoSection {
+        padding: 11px 9px 9px;
+    }
+
+    .infoGrid,
+    .infoGrid[data-columns="2"],
+    .infoGrid[data-columns="3"],
+    .infoGrid[data-columns="4"],
+    .settlementGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px 10px;
+        padding: 14px 10px;
+    }
+
+    .infoItem>span {
+        font-size: 9px;
+    }
+
+    .infoItem>strong {
+        font-size: 10px;
+    }
+
+    .productGrid {
+        grid-template-columns: 1fr;
+        gap: 7px;
+    }
+
+    .productCard {
+        min-height: 48px;
+        padding: 7px 10px;
+    }
+
+    .receiptFooter {
+        min-height: 78px;
+        padding: 12px;
+    }
+
+    .receiptFooter h2 {
+        font-size: 11px;
+    }
+
+    .receiptFooter p {
+        font-size: 9px;
+    }
+
+    .footerStar {
+        font-size: 31px;
+        line-height: 22px;
+    }
+
+    .footerBrand strong {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footerBrand {
+        width: 85px;
+    }
+
+    .footerLogoImage {
+        width: 78px;
+    }
+}
+
+@media (max-width: 350px) {
+
+    .infoGrid,
+    .infoGrid[data-columns="2"],
+    .infoGrid[data-columns="3"],
+    .infoGrid[data-columns="4"],
+    .settlementGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media print {
+    .transactionShell {
+        background: #fff !important;
+    }
+
+    .transactionShell :global(.admin-viewport),
+    .transactionShell :global(.admin-frame),
+    .transactionShell :global(.admin-content) {
+        background: #fff !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .detailsPage {
+        min-height: 0;
+        padding: 0;
+        background: #fff !important;
+    }
+
+    .pageNavigation,
+    .printButton {
+        display: none !important;
+    }
+
+    .receiptContent {
+        gap: 7px;
+    }
+
+    .referenceBanner,
+    .infoSection,
+    .receiptFooter {
+        break-inside: avoid;
+        border: 1px solid #e7e7e7;
+        box-shadow: none;
+    }
+
+    .infoGrid,
+    .settlementGrid,
+    .productCard {
+        background: #f8f8f8 !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+}
