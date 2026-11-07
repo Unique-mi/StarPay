@@ -212,11 +212,26 @@ input:focus-visible {
     transition: border-color .18s, box-shadow .18s;
 }
 
-.phone-field:focus-within,
-.password-field:focus-within {
-    border-color: #0b9870;
-    box-shadow: 0 0 0 3px rgba(8, 143, 104, .07);
+.password-field,
+.password-field:focus-within,
+.password-field:active {
+    border-color: #e5e7eb !important;
+    box-shadow: none !important;
+    outline: none !important;
 }
+
+
+.phone-field .phone-input:focus,
+.phone-field .phone-input:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.password-field .password-toggle:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 
 .flag {
     margin-left: 14px;
@@ -5278,6 +5293,14 @@ body {
     }
 }
 
+@media (max-width: 360px) {
+
+    .dashboard-frame .payment-options-ring,
+    .dashboard-frame .institution-ring {
+        width: 156px;
+    }
+}
+
 .dashboard-frame .payment-options-ring {
     position: relative;
     width: 190px;
@@ -5324,24 +5347,26 @@ body {
     pointer-events: none;
 }
 
-/* 67.8% on the green Banks segment */
 .dashboard-frame .institution-ring>.banks-percent {
     top: 17%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-/* 32.2% on the navy Wallets segment */
 .dashboard-frame .institution-ring>.wallets-percent {
     top: 83%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-@media (max-width: 360px) {
+.password-field .password-input:focus,
+.password-field .password-input:focus-visible {
+    border-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
 
-    .dashboard-frame .payment-options-ring,
-    .dashboard-frame .institution-ring {
-        width: 156px;
-    }
+.password-field .password-toggle:focus {
+    outline: none;
+    box-shadow: none;
 }
